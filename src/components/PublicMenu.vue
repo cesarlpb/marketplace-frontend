@@ -4,14 +4,15 @@ import { RouterLink } from 'vue-router';
 <template>
    <header>
         <div class="container">
-            <p class="logo">Easy Task</p>
+            <p class="logo"><RouterLink to="/">Easy Task</RouterLink></p>
             <nav>
-              <RouterLink to="/">Servicios</RouterLink>
               <RouterLink to="/about">Sobre Nosotros</RouterLink> 
+              
               <RouterLink to="/login">Login</RouterLink> 
+              <RouterLink to="/register">Registrarse</RouterLink> 
+              
             </nav>
         </div>
     </header>
   </template>
-
   

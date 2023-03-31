@@ -28,6 +28,37 @@ const router = createRouter({
       name: 'register',
       component: () => import('../views/RegisterView.vue')
     },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('../views/ShopView.vue')
+    },
+    {
+      path: '/support',
+      name: 'support',
+      component: () => import('../views/SupportView.vue')
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: () => import('../views/AccountView.vue')
+    },
+    {
+      path: '/home',
+      name: 'privateshop',
+      component: () => import('../views/PrivateShopView.vue')
+    },
+    {
+      path: '/about-us',
+      name: 'privateabout',
+      component: () => import('../views/PrivateAboutView.vue')
+    },
+    {
+      path: '/product-view/:id',
+      name: 'product-view',
+      component: () => import('../views/ProductView.vue')
+    },
+        
   ]
 })
 

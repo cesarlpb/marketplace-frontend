@@ -1,6 +1,6 @@
 
 <template>
-    <PublicMenu />
+    <PrivateMenu />
     <div class="about">
         <h1>Acerca de nosotros</h1>
     </div>
@@ -52,8 +52,20 @@
 </template>
 
 <script setup>
-import PublicMenu from '../components/PublicMenu.vue';
+import { ref, onMounted } from 'vue';
+import PrivateMenu from '../components/PrivateMenu.vue';
 import Footer from '../components/Footer.vue';
+import router from '../router/index.js';
+
+const isLogged = ref(localStorage.getItem('logged'));
+
+onMounted(() => {
+  if (isLogged.value !== "si") {
+    router.push('/login');
+  }
+});
+
+
 
 </script>
 
